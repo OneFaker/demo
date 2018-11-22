@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
  * @Author:zhouwen 940668676@qq.com
  * project:webdemo
  * date:2018/11/22 9:58
- * DESC:工厂类的生产工具类
+ * DESC:工厂类的生产工具类2
  */
 public class InstanceUtils {
     public  static IPersonFactory  getInstance(Class c) throws ClassNotFoundException, IllegalAccessException, InstantiationException, IOException {
