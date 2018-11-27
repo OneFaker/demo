@@ -16,7 +16,7 @@ public class DynamicProxyTest {
     public static void main(String[] args) {
         ISubjectProxy subjectProxy=new SubjectProxyImpl();
         //创建代理的关联对象
-        InvocationHandler handler=new DynamicProxy(subjectProxy);
+        InvocationHandler handler=new DynamicProxy<ISubjectProxy>(subjectProxy);
         //创建真正的代理对象，实现代理
         ISubjectProxy proxy =(ISubjectProxy) Proxy.newProxyInstance(handler.getClass().getClassLoader(), subjectProxy.getClass().getInterfaces(), handler);
         proxy.hello("world",0);

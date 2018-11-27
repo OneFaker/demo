@@ -11,11 +11,11 @@ import java.lang.reflect.Method;
  * date:2018/11/22 15:48
  * DESC:
  */
-public class DynamicProxy implements InvocationHandler {
+public class DynamicProxy<T> implements InvocationHandler {
 
-    private ISubjectProxy subjectProxy;
+    private T subjectProxy;
 
-    public  DynamicProxy(ISubjectProxy subjectProxy){
+    public  DynamicProxy(T subjectProxy){
         this.subjectProxy=subjectProxy;
     }
 

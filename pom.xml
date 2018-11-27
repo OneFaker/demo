@@ -27,7 +27,28 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
+ <!--<repositories>
+    下面这个配置是用于下载jar的，作用于setting的mirror类似，所以可以不写，把公司私服地址写在mirror里面即可
+   <repository>
+     <id></id> 随便取，对应mavensetting的镜像id
+     <name></name>与id值一样即可
+     <url></url>配置目标源的下载地址，也就是从哪个地址去下载
+   </repository>
+ </repositories>
+ -->
+<!--  <distributionManagement>
+    //发布到私服需要配置用户名和密码， 在maven的setting文件里面的servers标签里面配置
+     <repository>发布release的版本
+        <id>qqq</id> 随便取
+       <name></name>与id值一样即可
+       <url></url>发布到私服的那个仓库下。url: 私服地址ip/nexus/content/repositories/release/ 表示发布的是release版本
+     </repository>
+    <snapshotRepository>发布snapshot版本
+      <id></id>
+      <name></name>
+      <url></url>发布到私服的那个仓库下。url: 私服地址ip/nexus/content/repositories/snapshots/
+    </snapshotRepository>
+  </distributionManagement>-->
   <build>
     <finalName>web-demo</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
